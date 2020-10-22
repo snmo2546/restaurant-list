@@ -1,13 +1,10 @@
-// include express from node_modules
+// include packages and define server related variables
 const express = require('express')
-const app = express()
-const restaurantList = require('./restaurant.json')
-
-// define server related variables
-const port = 3000
-
-// require express-handlebars here
 const exphbs = require('express-handlebars')
+const restaurantList = require('./restaurant.json')
+const mongoose = require('mongoose')
+const app = express()
+const port = 3000
 
 // setting template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
@@ -15,6 +12,19 @@ app.set('view engine', 'handlebars')
 
 // setting static files
 app.use(express.static('public'))
+
+// connect to MongoDB
+mongoose.connect('mongodb://localhost/restaurant-list', { useNewUrlParser: true, useUnifiedTopology: true })
+
+const db = mongoose.connection
+
+db.on('error', () => {
+  console.log('mongo error!')
+})
+
+db.once('open', () => {
+  console.log('mongodb connected!')
+})
 
 // routes setting
 app.get('/', (req, res) => {
