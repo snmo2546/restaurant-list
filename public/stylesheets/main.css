@@ -89,6 +89,12 @@ header {
   padding: 1px;
 }
 
+.editForm {
+  background-color: #fce2cf;
+  padding: 25px;
+  margin-top: -60px;
+}
+
 @media screen and (max-width: 992px) {
   
   .card img{

@@ -1,4 +1,53 @@
-<form action="/restaurants" method="POST">
+<div class="d-flex justify-content-center">
+  <div class="editForm d-flex justify-content-center col-6">
+    <form action="/restaurants/" method="POST" class="col-10">
+      <div class="form-group">
+        <label for="formName">餐廳名稱</label>
+        <input type="text" placeholder="Name" name="name" class="form-control" id="formName">
+      </div>
+      <div class=" form-group">
+        <label for="formNameEn">英文名</label>
+        <input type="text" placeholder="English Name" name="name_en" class="form-control" id="formNameEn">
+      </div>
+      <div class=" form-group">
+        <label for="formCategory">餐點類型</label>
+        <input type="text" placeholder="Category" name="category" class="form-control" id="formCategory">
+      </div>
+      <div class=" form-group">
+        <label for="formImage">照片</label>
+        <input type="text" placeholder="Image Link" name="image" class="form-control" id="formImage">
+      </div>
+      <div class=" form-group">
+        <label for="formLocation">地址</label>
+        <input type="text" placeholder="Location" name="location" class="form-control" id="formLocation">
+      </div>
+      <div class=" form-group">
+        <label for="formPhone">電話</label>
+        <input type="text" placeholder="Phone" name="phone" class="form-control" id="formPhone">
+      </div>
+      <div class=" form-group">
+        <label for="formGoogleMap">Google Map</label>
+        <input type="text" placeholder="Google Map" name="google_map" class="form-control" id="formGoogleMap">
+      </div>
+      <div class=" form-group">
+        <label for="formRating">評分</label>
+        <input type="number" placeholder="Rating" name="rating" class="form-control" id="formRating">
+      </div>
+      <div class=" form-group">
+        <label for="formDescription">簡介</label>
+        <input type="text" placeholder="Description" name="description" class="form-control" id="formDescription">
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-secondary function-btn mr-3">提交</button>
+        <a href="/" class="function-btn"><button type="button" class="btn btn-secondary function-btn">返回</button></a>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+
+{{!-- <form action="/restaurants" method="POST">
   <input type="text" placeholder="Name" name="name">
   <input type="text" placeholder="English Name" name="name_en">
   <input type="text" placeholder="Category" name="category">
@@ -9,4 +58,4 @@
   <input type="number" placeholder="Rating" name="rating">
   <input type="text" placeholder="Description" name="description">
   <button type="submit">Create</button>
-</form>
+</form> --}}

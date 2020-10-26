@@ -1,13 +1,56 @@
-<form action="/restaurants/{{ restaurant._id }}/edit" method="POST">
-  <input type="text" placeholder="Name" name="name" value="{{ restaurant.name }}">
-  <input type="text" placeholder="English Name" name="name_en" value="{{ restaurant.name_en }}">
-  <input type="text" placeholder="Category" name="category" value="{{ restaurant.category }}">
-  <input type="text" placeholder="Image" name="image" value="{{ restaurant.image }}">
-  <input type="text" placeholder="Location" name="location" value="{{ restaurant.location }}">
-  <input type="text" placeholder="Phone" name="phone" value="{{ restaurant.phone }}">
-  <input type="text" placeholder="Google Map" name="google_map" value="{{ restaurant.google_map }}">
-  <input type="number" placeholder="Rating" name="rating" value="{{ restaurant.rating }}">
-  <input type="text" placeholder="Description" name="description" value="{{ restaurant.description }}">
-  <button type="submit">Save</button>
-  <a href="/">Back</a>
-</form>
+<div class="d-flex justify-content-center">
+  <div class="editForm d-flex justify-content-center col-8">
+    <form action="/restaurants/{{ restaurant._id }}/edit" method="POST" class="col-10">
+      <div class="form-group">
+        <label for="formName">餐廳名稱</label>
+        <input type="text" placeholder="Name" name="name" class="form-control" id="formName"
+          value="{{ restaurant.name }}">
+      </div>
+      <div class=" form-group">
+        <label for="formNameEn">英文名</label>
+        <input type="text" placeholder="English Name" name="name_en" class="form-control" id="formNameEn"
+          value="{{ restaurant.name_en }}">
+      </div>
+      <div class=" form-group">
+        <label for="formCategory">餐點類型</label>
+        <input type="text" placeholder="Category" name="category" class="form-control" id="formCategory"
+          value="{{ restaurant.category }}">
+      </div>
+      <div class=" form-group">
+        <label for="formImage">照片</label>
+        <input type="text" placeholder="Image Link" name="image" class="form-control" id="formImage"
+          value="{{ restaurant.image }}">
+      </div>
+      <div class=" form-group">
+        <label for="formLocation">地址</label>
+        <input type="text" placeholder="Location" name="location" class="form-control" id="formLocation"
+          value="{{ restaurant.location }}">
+      </div>
+      <div class=" form-group">
+        <label for="formPhone">電話</label>
+        <input type="text" placeholder="Phone" name="phone" class="form-control" id="formPhone"
+          value="{{ restaurant.phone }}">
+      </div>
+      <div class=" form-group">
+        <label for="formGoogleMap">Google Map</label>
+        <input type="text" placeholder="Google Map" name="google_map" class="form-control" id="formGoogleMap"
+          value="{{ restaurant.google_map }}">
+      </div>
+      <div class=" form-group">
+        <label for="formRating">評分</label>
+        <input type="number" placeholder="Rating" name="rating" class="form-control" id="formRating"
+          value="{{ restaurant.rating }}">
+      </div>
+      <div class=" form-group">
+        <label for="formDescription">簡介</label>
+        <input type="text" placeholder="Description" name="description" class="form-control" id="formDescription"
+          value="{{ restaurant.description }}">
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-secondary function-btn mr-3">儲存</button>
+        <a href="/restaurants/{{ restaurant._id }}" class="function-btn"><button type="button"
+            class="btn btn-secondary function-btn">返回</button></a>
+      </div>
+    </form>
+  </div>
+</div>
