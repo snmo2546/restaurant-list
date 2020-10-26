@@ -10,7 +10,7 @@ Find the best places to eat!🍝
 * Search restaurants by type (in progress)
 
 ## Preview
-![Website screenshot](https://github.com/snmo2546/restaurant-list/blob/master/restaurant_list.PNG)
+![Website screenshot](https://github.com/snmo2546/restaurant-list/blob/master/screen-capture.png)
 
 ## How to use
 Clone this repository to your local computer
