@@ -27,8 +27,12 @@ header {
   border-radius: 8px;
   padding: 20px 30px;
   border: 0;
-  margin-top: -60px;
+  margin: -60px 20px 0px 50px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-outer {
+  min-width: 620px;
 }
 
 .search-bar .search-bar-inner h4 {
@@ -76,6 +80,13 @@ header {
   text-align: center;
   font-size: 3rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.function-btn {
+  color: #999999;
+  border: 0px;
+  background-color: white;
+  padding: 1px;
 }
 
 @media screen and (max-width: 992px) {
