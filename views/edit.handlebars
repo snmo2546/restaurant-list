@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center">
   <div class="editForm d-flex justify-content-center col-8">
-    <form action="/restaurants/{{ restaurant._id }}/edit" method="POST" class="col-10">
+    <form action="/restaurants/{{ restaurant._id }}?_method=PUT" method="POST" class="col-10">
       <div class="form-group">
         <label for="formName">餐廳名稱</label>
         <input type="text" placeholder="Name" name="name" class="form-control" id="formName"
