@@ -10,8 +10,16 @@ require('./config/mongoose')
 const app = express()
 const port = 3000
 
+// register express-handlebars helper
+const hbs = exphbs.create({
+  defaultlayout: 'main',
+  helpers: {
+    equals: function (value1, value2) { return (value1 === value2) }
+  }
+})
+
 // set template engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
 
 // set static files
