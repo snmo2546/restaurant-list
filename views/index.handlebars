@@ -16,8 +16,6 @@
       </form>
     </div>
   </div>
-  <!-- create button -->
-  <a class="btn btn-danger d-flex align-items-center" href="./restaurants/new">新增餐廳</a>
 </div>
 
 
@@ -44,7 +42,8 @@
                 <div class="functions">
                   <a href="./restaurants/{{ this._id }}" class="function-btn"><i class="fas fa-info-circle"></i></a>
                   <a href="./restaurants/{{ this._id }}/edit" class="function-btn"><i class="fas fa-pen"></i></a>
-                  <form action="./restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline">
+                  <form action="./restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline"
+                    onsubmit="return confirm('確認要刪除該筆餐廳資料嗎？')">
                     <button type="submit" class="function-btn"><i class="fas fa-trash"></i></button>
                   </form>
                 </div>

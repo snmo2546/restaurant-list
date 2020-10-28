@@ -37,7 +37,8 @@
       <div class="functions col-2">
         <a href="/restaurants/{{ restaurant._id }}/edit" class="function-btn"><i class="fas fa-pen"></i></a>
         <a href="/" class="function-btn"><i class="fas fa-home"></i></a>
-        <form action="/restaurants/{{ restaurant._id }}?_method=DELETE" method="POST" style="display: inline">
+        <form action="/restaurants/{{ restaurant._id }}?_method=DELETE" method="POST" style="display: inline"
+          onsubmit="return confirm('確認要刪除該筆餐廳資料嗎？')">
           <button type="submit" class="function-btn"><i class="fas fa-trash"></i></button>
         </form>
       </div>
@@ -45,5 +46,4 @@
         style="max-width: 600px;">
     </div>
   </div>
-
 </div>
