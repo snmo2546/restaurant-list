@@ -2,17 +2,20 @@
 const express = require('express')
 const router = express.Router()
 
-// include home and restaurants module
+// include home, restaurants, search and users module
 const home = require('./modules/home')
 const restaurants = require('./modules/restaurants')
 const search = require('./modules/search')
 const users = require('./modules/users')
 
+// include authenticator middleware
+const { authenticator } = require('../middleware/auth')
+
 // set routes
-router.use('/restaurants', restaurants)
-router.use('/search', search)
+router.use('/restaurants', authenticator, restaurants)
+router.use('/search', authenticator, search)
 router.use('/users', users)
-router.use('/', home)
+router.use('/', authenticator, home)
 
 // export module
 module.exports = router
