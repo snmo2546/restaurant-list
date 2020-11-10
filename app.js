@@ -1,5 +1,6 @@
 // include packages and define server related variables
 const express = require('express')
+const session = require('express-session')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
@@ -26,6 +27,11 @@ app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 
 // process URL with body-parser, method-override and express router
+app.use(session({
+  secret: 'ThisIsMySecret',
+  resave: false,
+  saveUninitialized: true
+}))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use(routes)
