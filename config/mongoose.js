@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 
 // connect to MongoDB
-mongoose.connect('mongodb://localhost/restaurant-list', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost/restaurant-list', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 
 // get connection status
 const db = mongoose.connection
