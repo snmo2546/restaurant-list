@@ -3,47 +3,47 @@
     <form action="/restaurants/{{ restaurant._id }}?_method=PUT" method="POST" class="col-10">
       <div class="form-group">
         <label for="formName">餐廳名稱</label>
-        <input type="text" placeholder="Name" name="name" class="form-control" id="formName"
+        <input type="text" placeholder="輸入名稱" name="name" class="form-control" id="formName"
           value="{{ restaurant.name }}">
       </div>
       <div class=" form-group">
         <label for="formNameEn">英文名</label>
-        <input type="text" placeholder="English Name" name="name_en" class="form-control" id="formNameEn"
+        <input type="text" placeholder="輸入英文名" name="name_en" class="form-control" id="formNameEn"
           value="{{ restaurant.name_en }}">
       </div>
       <div class=" form-group">
         <label for="formCategory">餐點類型</label>
-        <input type="text" placeholder="Category" name="category" class="form-control" id="formCategory"
+        <input type="text" placeholder="輸入類型" name="category" class="form-control" id="formCategory"
           value="{{ restaurant.category }}">
       </div>
       <div class=" form-group">
         <label for="formImage">照片</label>
-        <input type="text" placeholder="Image Link" name="image" class="form-control" id="formImage"
+        <input type="url" placeholder="輸入照片連結" name="image" class="form-control" id="formImage"
           value="{{ restaurant.image }}">
       </div>
       <div class=" form-group">
         <label for="formLocation">地址</label>
-        <input type="text" placeholder="Location" name="location" class="form-control" id="formLocation"
+        <input type="text" placeholder="輸入地址" name="location" class="form-control" id="formLocation"
           value="{{ restaurant.location }}">
       </div>
       <div class=" form-group">
         <label for="formPhone">電話</label>
-        <input type="text" placeholder="Phone" name="phone" class="form-control" id="formPhone"
+        <input type="text" placeholder="輸入電話" name="phone" class="form-control" id="formPhone"
           value="{{ restaurant.phone }}">
       </div>
       <div class=" form-group">
         <label for="formGoogleMap">Google Map</label>
-        <input type="text" placeholder="Google Map" name="google_map" class="form-control" id="formGoogleMap"
+        <input type="text" placeholder="輸入 Google Map 網址" name="google_map" class="form-control" id="formGoogleMap"
           value="{{ restaurant.google_map }}">
       </div>
       <div class=" form-group">
         <label for="formRating">評分</label>
-        <input type="number" placeholder="Rating" name="rating" class="form-control" id="formRating"
+        <input type="number" placeholder="輸入評分" name="rating" class="form-control" id="formRating" step="0.1"
           value="{{ restaurant.rating }}">
       </div>
       <div class=" form-group">
         <label for="formDescription">簡介</label>
-        <input type="text" placeholder="Description" name="description" class="form-control" id="formDescription"
+        <input type="text" placeholder="輸入簡介" name="description" class="form-control" id="formDescription"
           value="{{ restaurant.description }}">
       </div>
       <div class="d-flex justify-content-center">

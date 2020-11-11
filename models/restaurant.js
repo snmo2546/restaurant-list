@@ -8,7 +8,6 @@ const restaurantSchema = new Schema({
   },
   name_en: {
     type: String,
-    required: false
   },
   category: {
     type: String,
@@ -32,7 +31,7 @@ const restaurantSchema = new Schema({
   },
   rating: {
     type: Number,
-    required: false
+    required: true
   },
   description: {
     type: String,
