@@ -6,13 +6,17 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const flash = require('connect-flash')
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
 const routes = require('./routes')
 
 const usePassport = require('./config/passport')
 require('./config/mongoose')
 
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 // register express-handlebars helper
 const hbs = exphbs.create({
@@ -31,7 +35,7 @@ app.use(express.static('public'))
 
 // process URL with body-parser, method-override and express router
 app.use(session({
-  secret: 'ThisIsMySecret',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }))
