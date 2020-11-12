@@ -1,41 +1,46 @@
 <div class="d-flex justify-content-center">
   <div class="editForm d-flex justify-content-center col-6">
     <form action="/restaurants/" method="POST" class="col-10">
+      <div class="form-row mb-2">
+        <small>*為必填</small>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-sm-6">
+          <label for="formName">餐廳名稱*</label>
+          <input type="text" placeholder="輸入餐廳名稱" name="name" class="form-control" id="formName" required>
+        </div>
+        <div class="form-group col-sm-6">
+          <label for="formNameEn">英文名</label>
+          <input type="text" placeholder="輸入英文名稱" name="name_en" class="form-control" id="formNameEn">
+        </div>
+      </div>
       <div class="form-group">
-        <label for="formName">餐廳名稱</label>
-        <input type="text" placeholder="輸入名稱" name="name" class="form-control" id="formName">
+        <label for="formCategory">餐點類型*</label>
+        <input type="text" placeholder="輸入類型，如日式料理、西餐..." name="category" class="form-control" id="formCategory" required>
       </div>
-      <div class=" form-group">
-        <label for="formNameEn">英文名</label>
-        <input type="text" placeholder="輸入英文名" name="name_en" class="form-control" id="formNameEn">
-      </div>
-      <div class=" form-group">
-        <label for="formCategory">餐點類型</label>
-        <input type="text" placeholder="輸入類型" name="category" class="form-control" id="formCategory">
-      </div>
-      <div class=" form-group">
+      <div class="form-group">
         <label for="formImage">照片</label>
-        <input type="url" placeholder="輸入照片連結" name="image" class="form-control" id="formImage">
+        <input type="url" placeholder="輸入有效照片連結，例：http://example.com/image.jpg" name="image" class="form-control" id="formImage">
       </div>
-      <div class=" form-group">
+      <div class="form-group">
         <label for="formLocation">地址</label>
-        <input type="text" placeholder="輸入地址" name="location" class="form-control" id="formLocation">
+        <input type="text" placeholder="輸入餐廳地址" name="location" class="form-control" id="formLocation">
       </div>
-      <div class=" form-group">
+      <div class="form-group">
         <label for="formPhone">電話</label>
-        <input type="text" placeholder="輸入電話" name="phone" class="form-control" id="formPhone">
+        <input type="text" placeholder="輸入餐廳電話" name="phone" class="form-control" id="formPhone">
       </div>
-      <div class=" form-group">
+      <div class="form-group">
         <label for="formGoogleMap">Google Map</label>
-        <input type="text" placeholder="輸入 Google Map 網址" name="google_map" class="form-control" id="formGoogleMap">
+        <input type="url" placeholder="輸入餐廳 Google Map 分享網址，例：https://goo.gl/maps/exmaple" name="google_map" class="form-control" id="formGoogleMap">
       </div>
-      <div class=" form-group">
-        <label for="formRating">評分</label>
-        <input type="number" placeholder="輸入評分" name="rating" class="form-control" id="formRating" step="0.1">
+      <div class="form-group">
+        <label for="formRating">評分*</label>
+        <input type="number" placeholder="輸入餐廳評分" name="rating" class="form-control" id="formRating" step="0.1" required>
       </div>
-      <div class=" form-group">
+      <div class="form-group">
         <label for="formDescription">簡介</label>
-        <input type="text" placeholder="輸入簡介" name="description" class="form-control" id="formDescription">
+        <input type="text" placeholder="輸入餐廳簡介" name="description" class="form-control" id="formDescription">
       </div>
       <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-secondary function-btn mr-3">提交</button>
